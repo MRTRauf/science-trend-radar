@@ -1,0 +1,9 @@
+pandas
+requests
+pyarrow
+scikit-learn
+streamlit
+plotly
+python-dotenv
+pytest
+ruff
