@@ -140,13 +140,23 @@ def clusters_section(
         examples["doi_url"] = examples["doi"].apply(to_doi_url)
         available_cols = [c for c in available_cols if c != "doi"] + ["doi_url"]
 
-        st.dataframe(
-            examples[available_cols],
-            use_container_width=True,
-            column_config={
+        column_config = None
+        if hasattr(st, "column_config") and hasattr(st.column_config, "LinkColumn"):
+            column_config = {
                 "doi_url": st.column_config.LinkColumn("DOI", display_text="open"),
-            },
-        )
+            }
+
+        try:
+            if column_config:
+                st.dataframe(
+                    examples[available_cols],
+                    use_container_width=True,
+                    column_config=column_config,
+                )
+            else:
+                st.dataframe(examples[available_cols], use_container_width=True)
+        except TypeError:
+            st.dataframe(examples[available_cols], use_container_width=True)
     else:
         st.dataframe(examples[available_cols], use_container_width=True)
 
