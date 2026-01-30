@@ -55,3 +55,7 @@ Thumbs.db
 !artifacts/clustered.parquet
 !artifacts/cluster_meta.json
 !artifacts/cluster_summaries.json
+
+# --- Allow Streamlit theme config ---
+!.streamlit/
+!.streamlit/config.toml
