@@ -59,3 +59,4 @@ Thumbs.db
 # --- Allow Streamlit theme config ---
 !.streamlit/
 !.streamlit/config.toml
+
