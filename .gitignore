@@ -48,3 +48,10 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# --- Allow small demo artifacts for Streamlit Cloud ---
+!artifacts/
+!artifacts/works.parquet
+!artifacts/clustered.parquet
+!artifacts/cluster_meta.json
+!artifacts/cluster_summaries.json

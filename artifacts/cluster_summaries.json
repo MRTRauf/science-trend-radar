@@ -1,0 +1,102 @@
+[
+  {
+    "cluster_id": 0,
+    "label": "economy / circular",
+    "summary": "Cluster focused on economy, circular, china based on TF-IDF terms.",
+    "keywords": [
+      "economy",
+      "circular",
+      "china"
+    ]
+  },
+  {
+    "cluster_id": 1,
+    "label": "construction / economy",
+    "summary": "Cluster focused on construction, economy, circular based on TF-IDF terms.",
+    "keywords": [
+      "construction",
+      "economy",
+      "circular"
+    ]
+  },
+  {
+    "cluster_id": 2,
+    "label": "ce / circular",
+    "summary": "Cluster focused on ce, circular, economy based on TF-IDF terms.",
+    "keywords": [
+      "ce",
+      "circular",
+      "economy"
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "label": "economy / circular",
+    "summary": "Cluster focused on economy, circular, sustainability based on TF-IDF terms.",
+    "keywords": [
+      "economy",
+      "circular",
+      "sustainability"
+    ]
+  },
+  {
+    "cluster_id": 4,
+    "label": "economy / circular",
+    "summary": "Cluster focused on economy, circular, introduction based on TF-IDF terms.",
+    "keywords": [
+      "economy",
+      "circular",
+      "introduction"
+    ]
+  },
+  {
+    "cluster_id": 5,
+    "label": "circular / supply",
+    "summary": "Cluster focused on circular, supply, economy based on TF-IDF terms.",
+    "keywords": [
+      "circular",
+      "supply",
+      "economy"
+    ]
+  },
+  {
+    "cluster_id": 6,
+    "label": "circular / economy",
+    "summary": "Cluster focused on circular, economy, recycling based on TF-IDF terms.",
+    "keywords": [
+      "circular",
+      "economy",
+      "recycling"
+    ]
+  },
+  {
+    "cluster_id": 7,
+    "label": "circular / economy",
+    "summary": "Cluster focused on circular, economy, environment based on TF-IDF terms.",
+    "keywords": [
+      "circular",
+      "economy",
+      "environment"
+    ]
+  },
+  {
+    "cluster_id": 8,
+    "label": "circular / economy",
+    "summary": "Cluster focused on circular, economy, sustainable based on TF-IDF terms.",
+    "keywords": [
+      "circular",
+      "economy",
+      "sustainable"
+    ]
+  },
+  {
+    "cluster_id": 9,
+    "label": "waste / management",
+    "summary": "Cluster focused on waste, management, economy based on TF-IDF terms.",
+    "keywords": [
+      "waste",
+      "management",
+      "economy"
+    ]
+  }
+]
