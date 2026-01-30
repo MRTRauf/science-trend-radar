@@ -1,0 +1,156 @@
+:root {
+  --accent: #f97316;
+  --accent-soft: #fff1e8;
+  --surface: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --text-muted: #475569;
+  --section-border: #e5e7eb;
+}
+
+html, body, [class*="css"] {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+.app-hero {
+  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+  border: 1px solid var(--card-border);
+  margin-bottom: 1rem;
+}
+
+.app-hero h1 {
+  margin: 0 0 0.25rem 0;
+  font-size: 2rem;
+}
+
+.app-hero p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.section-title {
+  margin: 1.5rem 0 0.75rem 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--section-border);
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 0.35rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.card {
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 14px 14px 0 0;
+  background: var(--accent);
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.metric-help {
+  margin-top: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+div[data-testid="stTabs"] {
+  margin-top: 0.75rem;
+}
+
+div[data-testid="stTabs"] button {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.75rem;
+}
+
+div[data-testid="stTabs"] button[aria-selected="true"] {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+div[data-testid="stTabs"] button:hover {
+  color: var(--accent);
+}
+
+div[data-testid="stSidebar"] h2, div[data-testid="stSidebar"] h3 {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+div[data-testid="stSidebar"] button,
+div[data-testid="stSidebar"] .stButton > button,
+div.stButton > button {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+
+div[data-testid="stSidebar"] .stButton > button:hover,
+div.stButton > button:hover {
+  background: #ea6a12;
+}
+
+a, a:visited {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #ea6a12;
+}
+
+div[data-testid="stDataFrame"] {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+}
+
+div[data-testid="stDataFrame"] thead tr th {
+  background-color: var(--accent-soft);
+}
+
+div[data-testid="stDataFrame"] tbody tr:hover {
+  background-color: var(--accent-soft);
+}

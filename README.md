@@ -23,3 +23,6 @@ src/
     paths.py
 tests/
 ```
+
+## Theme
+The Streamlit theme is configured in `.streamlit/config.toml`.
