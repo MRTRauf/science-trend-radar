@@ -24,11 +24,37 @@ SUMMARIES_PATH = artifacts_dir() / "cluster_summaries.json"
 PLOTLY_ACCENT = "#f97316"
 
 
+def read_parquet_safe(path: Path) -> pd.DataFrame:
+    try:
+        return pd.read_parquet(path, engine="pyarrow", dtype_backend="numpy_nullable")
+    except TypeError:
+        return pd.read_parquet(path, engine="pyarrow")
+
+
+def make_streamlit_safe(df: pd.DataFrame) -> pd.DataFrame:
+    safe = df.copy()
+    for col, dtype in safe.dtypes.items():
+        dtype_str = str(dtype)
+        if "pyarrow" in dtype_str or "string[pyarrow]" in dtype_str:
+            safe[col] = safe[col].astype("object")
+
+    if "publication_year" in safe.columns:
+        safe["publication_year"] = pd.to_numeric(safe["publication_year"], errors="coerce").astype("Int64")
+
+    if "cited_by_count" in safe.columns:
+        safe["cited_by_count"] = (
+            pd.to_numeric(safe["cited_by_count"], errors="coerce").fillna(0).astype("Int64")
+        )
+
+    return safe
+
+
 def load_clustered(path: Path) -> pd.DataFrame:
     if not path.exists():
         st.error(f"Missing clustered data at {path}")
         st.stop()
-    return pd.read_parquet(path)
+    df = read_parquet_safe(path)
+    return make_streamlit_safe(df)
 
 
 def load_summaries(path: Path) -> Dict[int, Dict[str, object]]:
