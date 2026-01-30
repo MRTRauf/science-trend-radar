@@ -1,8 +1,8 @@
-pandas
+pandas==2.3.3
 requests
-pyarrow
+pyarrow==23.0.0
 scikit-learn
-streamlit
+streamlit==1.53.1
 plotly
 python-dotenv
 pytest
