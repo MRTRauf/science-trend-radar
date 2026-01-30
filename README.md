@@ -1,7 +1,5 @@
 # science-trend-radar
 
-# science-trend-radar
-
 [![tests](https://github.com/MRTRauf/science-trend-radar/actions/workflows/tests.yml/badge.svg)](https://github.com/MRTRauf/science-trend-radar/actions/workflows/tests.yml)
 
 Project to track and summarize research trends using OpenAlex data and a Streamlit dashboard.
